@@ -1,0 +1,24 @@
+#1
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
+
+student_grades = {}  # Create a new empty dictionary
+
+for key in student_scores:  # Iterate through the keys in student_scores
+    score = student_scores[key]  # Retrieve the score associated with each key
+    
+    if score >= 91 and score <= 100:
+        student_grades[key] = "Outstanding"  # Make sure to assign the value to student_grades[key]
+    elif score >= 81 and score <= 90:
+        student_grades[key] = "Exceeds Expectations"
+    elif score >= 71 and score <= 80:  # Don't forget to include ":"
+        student_grades[key] = "Acceptable"
+    else:
+        student_grades[key] = "Fail"
+
+print(student_grades)  # Print the final results
